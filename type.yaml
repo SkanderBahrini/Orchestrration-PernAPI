@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: type
+  name: type
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: type
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: type
+    spec:
+      containers:
+      - image: skander96/pern:8
+        name: pern
+        ports:
+        - containerPort: 4000
+        resources: {}
+status: {}
+
